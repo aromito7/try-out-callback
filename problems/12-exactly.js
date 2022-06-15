@@ -27,12 +27,14 @@ console.log(result4); // true
 
 *******************************************************************************/
 
-let exactly = function() {
+let exactly = function(array, num, cb) {
+    let newNum = 0
+    for(let el of array){
+        newNum += cb(el)
+    }
 
+    return num === newNum
 };
-
-
-
 
 
 
