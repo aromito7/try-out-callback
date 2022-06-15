@@ -17,10 +17,11 @@ console.log(result2);   // [ 'RUN!', 'FORREST!' ]
 *******************************************************************************/
 
 let myMap = function(arr, cb) {
+    let array = []
     for(let i in arr){
-        return cb(arr[i])
+        array.push(cb(arr[i]))
     }
-
+    // return arr.map(value => cb(value))
     return array
 };
 
