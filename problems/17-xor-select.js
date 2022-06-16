@@ -31,8 +31,8 @@ console.log(
 // [ 'art', 'app', 'buttery' ]
 *******************************************************************************/
 
-let xorSelect = function() {
-
+let xorSelect = function(array, cb1, cb2) {
+  return array.filter(num => cb1(num) + cb2(num) === 1)
 };
 
 

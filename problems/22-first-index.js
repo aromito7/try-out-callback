@@ -22,8 +22,15 @@ let result3 = firstIndex(['canine', 'feline', 'tree'], function (s) {
 console.log(result3); // -1
 *******************************************************************************/
 
-let firstIndex = function() {
+let firstIndex = function(arr, cb) {
 
+    for(let [key, val] of arr.entries()){
+        if(cb(val)){
+            return key
+        }
+    }
+
+    return -1
 };
 
 
